@@ -2,7 +2,7 @@
 
 ## Description
 
-<b>UNDER CONDTRUCTION</b>
+<b>THIS PROJECT IS CURRENTLY UNDER CONDTRUCTION</b>
 
 This repository is in a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB    
 
