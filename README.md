@@ -27,6 +27,12 @@ Users can:
 The requirement is same as SULCATA.
 
 ## Installation
+```
+cd ~/Download
+git clone http://github.com/bus710/sulcata-web
+cd sulcata-web/web-server
+npm install
+```
 
 ## Launch
 
