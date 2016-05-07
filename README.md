@@ -1,4 +1,4 @@
-# sulcata
+# sulcata-web-web
 
 ## Description
 This repository is in a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and image from kinect v2 will be shown on web browser.
