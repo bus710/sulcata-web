@@ -1,9 +1,14 @@
 # sulcata-web
 
 ## Description
-This repository is in a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You should set up SULCATA before SULCATA-WEB    
+This repository is in a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB    
 
-The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and image from kinect v2 will be shown on web browser.
+The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and image from kinect v2 will be shown on web browser.  
+
+Users can:  
+- control kobuki via web interface.
+- monitor 2D map on your web browser.
+- watch video streaming on your web browser.
 
 ## Maintainer
 - [SJ Kim](http://bus710.net) <<bus710@gmail.com>>
