@@ -1,14 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  form(name="ctrlPanel")
-    table
-      tr
-        | Linear X:
-        input(id="linearXText", name="linearXText", type="text", value="2")
-        br
-        | Angular Z:
-        input(id="angularZText", name="angularZText", type="text", value="0")
-    button(id="sendMsg", class="btn", onclick="pubMessage()").
-      Submit
+  h1 simple keyboard teleop example
+
+  #speed-label
+  #speed-slider
