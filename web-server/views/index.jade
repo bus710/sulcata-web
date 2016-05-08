@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  form(name="ctrlPanel") 
+    table
+      tr 
+        | Linear X:  
+        input(id="linearXText", name="linearXText", type="text", value="1.5")
+        br
+        | Angular Z:  
+        input(id="angularZText", name="angularZText", type="text", value="1.5")
+    button(id="sendMsg", class="btn" onclick="pubMessage()").
+      Submit

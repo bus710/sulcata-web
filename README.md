@@ -21,6 +21,7 @@ Users can:
 - [Requirement](#requirement)
 - [Installation](#installation)
 - [Launch](#launch)
+- [Commentary](#commentary)
 - [Reference](#reference)
 
 ## Requirement
@@ -35,6 +36,35 @@ npm install
 ```
 
 ## Launch
+
+## Commentary
+![images/rqt2.png](images/rqt2.png)
+
+```
+rostopic list
+> /keyop/teleop
+```
+
+```
+rostopic info /keyop/teleop
+> Type: kobuki_msgs/KeyboardInput
+> Publishers: None
+> Subscribers: 
+> * /keyop (http://x230:41315/)
+```
+
+```
+rosmsg show kobuki_msgs/KeyboardInput
+> uint8 KeyCode_Right=67
+> uint8 KeyCode_Left=68
+> uint8 KeyCode_Up=65
+> uint8 KeyCode_Down=66
+> uint8 KeyCode_Space=32
+> uint8 KeyCode_Enable=101
+> uint8 KeyCode_Disable=100
+> uint8 pressedKey
+```
+
 
 ## Reference
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
