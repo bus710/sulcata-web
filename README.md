@@ -38,7 +38,7 @@ npm install
 ## Launch
 
 ## Commentary
-![images/rqt2.png](images/rqt2.png)
+![images/rqt.png](images/rqt.png)
 
 ```
 rostopic list
