@@ -46,6 +46,8 @@ npm start
 After above steps, you can access your robot via web browser.  
 ![images/result.png](images/result.png)
 
+Now you can type on your keys such as up, down, left, right for controlling your Turtle-bot/Kobuki.
+
 ## Commentary
 As you can see, you can trace/control topics by using rqt so that you also can find the correct topic for your web interface. In this case, it is <b>/mobile_base/commands/velocity</b>. You can find the spot to change the topic from <b>public/javascript/client.js</b>. Another important file is <b>build/keyboardteleop.js</b>. You should check your keycode, and apply to the file to adjust switch-case section.   
 ![images/rqt.png](images/rqt.png)
