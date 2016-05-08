@@ -3,12 +3,13 @@ extends layout
 block content
   h1= title
   form(name="ctrlPanel") 
-    table
-      tr 
-        | Linear X:  
-        input(id="linearXText", name="linearXText", type="text", value="1.5")
-        br
-        | Angular Z:  
-        input(id="angularZText", name="angularZText", type="text", value="1.5")
-    button(id="sendMsg", class="btn" onclick="pubMessage()").
+    button(id="left", class="btn" onclick="left()").
+      Submit
+    button(id="right", class="btn" onclick="right()").
+      Submit
+    button(id="foward", class="btn" onclick="forward()").
+      Submit
+    button(id="backward", class="btn" onclick="backward()").
+      Submit
+    button(id="stop", class="btn" onclick="stop()").
       Submit
