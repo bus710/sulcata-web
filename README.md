@@ -65,6 +65,9 @@ rosmsg show kobuki_msgs/KeyboardInput
 > uint8 pressedKey
 ```
 
+```
+rostopic echo /keyop/teleop
+```
 
 ## Reference
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
