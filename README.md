@@ -72,8 +72,6 @@ rostopic echo /keyop/teleop
 ## Reference
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
 [2] https://github.com/oroca/rosbook_kobuki  
-[3] https://github.com/OpenKinect/libfreenect2  
-[4] https://github.com/code-iai/iai_kinect2  
-[5] http://wiki.ros.org/turtlebot  
+[5] http://wiki.ros.org/kobuki 
 
 
