@@ -55,7 +55,7 @@ As you can see, you can trace/control topics by using rqt so that you also can f
 ## Reference
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
 [2] https://github.com/oroca/rosbook_kobuki  
-[3] http://wiki.ros.org/kobuki 
+[3] http://wiki.ros.org/kobuki   
 [4] https://github.com/GT-RAIL/keyboardteleopjs
 
 
