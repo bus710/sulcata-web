@@ -51,7 +51,7 @@ npm start
 After above steps, you can access your robot via web browser.  
 ![images/result.png](images/result.png)
 
-Now you can type on your keys such as up, down, left, right for controlling your Turtle-bot/Kobuki.
+Now you can type on your keys such as up, down, left, right keys to control your Turtle-bot/Kobuki.
 
 ## Map Example
 ### Installation
