@@ -87,10 +87,10 @@ keyop-example
     ├── index.jade
     └── layout.jade
 ```
-If you are an experienced node.js developer, you are familiar with the structure. Even if you are not, it is simple as other web frameworks. In order to merge roslibjs and node.js, I divided the provided HTML code from Robotwebtools into three files such as layout.jade, index.jade, and client.js with below rules.
-- The html tags between head should be inserted to layout.jade.
+If you are an experienced node.js developer, you are familiar with the structure. Even if you are not, it is simple as other web frameworks. In order to merge roslibjs and node.js, I divided the provided HTML example code from Robotwebtools into three files such as layout.jade, index.jade, and client.js with below rules.
+- The html tags between <b>head</b> should be inserted to layout.jade.
 - The js source code should be inserted to client.js
-- The html tags between body should be inserted to index.jade.
+- The html tags between <b>body</b> should be inserted to index.jade.
 
 In addition to apply roslibjs, you should copy the library files into the public/build directiry then the sturucture should be same as below.
 ```
@@ -120,7 +120,7 @@ keyop-example
 ### How to find a specific topic?
 If you have a different robot system, you should check your topics to adjust this stacks for your system. If you check the client.js file, you might be noticed that there is a variable, which is "teleop". It is a javascript object and it contains the location of a certain topic.     
 
-As below screenshots, you can trace/control topics by using rqt so that you also can find the correct topic for your web interface. In this case, it is <b>/mobile_base/commands/velocity</b>. You can find the spot to change the topic from <b>public/javascript/client.js</b>. Another important file is <b>build/keyboardteleop.js</b>. You should check your keycode, and apply to the file to adjust the switch-case section in the file.   
+As below screenshots, you can trace/control topics by using rqt so that you also can find the correct topics for your web interface. In this case, it is <b>/mobile_base/commands/velocity</b>. You can find the spot to change the topic from <b>public/javascript/client.js</b>. Another important file is <b>build/keyboardteleop.js</b>. You should check your keycode, and apply to the file to adjust the switch-case section in the file.   
 ![images/rqt.png](images/rqt.png)
 ![images/rqt2.png](images/rqt2.png)
 
@@ -130,5 +130,8 @@ As below screenshots, you can trace/control topics by using rqt so that you also
 [2] https://github.com/oroca/rosbook_kobuki  
 [3] http://wiki.ros.org/kobuki   
 [4] https://github.com/GT-RAIL/keyboardteleopjs
+[5] http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl
+[6] http://wiki.ros.org/nav2djs/
+[7] http://wiki.ros.org/nav2djs/Tutorials/CreatingABasicNav2DWidget
 
 
