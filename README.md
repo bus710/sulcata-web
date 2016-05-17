@@ -129,7 +129,7 @@ As below screenshots, you can trace/control topics by using rqt so that you also
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
 [2] https://github.com/oroca/rosbook_kobuki  
 [3] http://wiki.ros.org/kobuki   
-[4] https://github.com/GT-RAIL/keyboardteleopjs
+[4] https://github.com/GT-RAIL/keyboardteleopjs  
 [5] http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl
 [6] http://wiki.ros.org/nav2djs/
 [7] http://wiki.ros.org/nav2djs/Tutorials/CreatingABasicNav2DWidget
