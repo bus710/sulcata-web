@@ -92,7 +92,7 @@ If you are an experienced node.js developer, you are familiar with the structure
 - The js source code should be inserted to client.js
 - The html tags between body should be inserted to index.jade.
 
-In addition to apply roslibjs, you should copy the library files into public/build directiry then the sturucture should be same as below.
+In addition to apply roslibjs, you should copy the library files into the public/build directiry then the sturucture should be same as below.
 ```
 keyop-example
 ├── app.js
