@@ -12,6 +12,23 @@ function init() {
 		url : host
 	});
 
+	// ======================== //
+	// part for map example
+	var viewer = new ROS2D.Viewer({
+		divID  : 'nav',
+		width  : 750,
+		height : 800
+	});
+
+	var nav = NAV2D.OccupancyGridClientNav({
+		ros : ros,
+	  rootObject : viewer.scene,
+		viewer : viewer,
+		serverName : '/pr2_move_base' // <======= 
+	});
+
+	// ========================= //
+	// part for keyop example
 	// Initialize the teleop.
 	var teleop = new KEYBOARDTELEOP.Teleop({
 		ros : ros,
