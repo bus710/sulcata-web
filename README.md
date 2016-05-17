@@ -18,8 +18,7 @@ Users can:
 - [Description](#description)
 - [Requirement](#requirement)
 - [Keyop Example](#keyop-example)
-- [Installation](#installation)
-- [Launch](#launch)
+- [Map Example](#map-example)
 - [Commentary](#commentary)
 - [Reference](#reference)
 
@@ -27,13 +26,16 @@ Users can:
 The requirement is same as SULCATA.
 
 ## Keyop Example
+
 ### Installation
+In order to install the required node stack, you can download the code from this repository.
 ```
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
 cd sulcata-web/keyop-example
 npm install
 ```
+
 ### Launch
 ```
 cd ~/Download/sulcata-web/scripts
@@ -44,6 +46,7 @@ cd sulcata-web/keyop-example
 npm start
 ```
 
+### Access
 After above steps, you can access your robot via web browser.  
 ![images/result.png](images/result.png)
 
