@@ -27,6 +27,7 @@ Users can:
 The requirement is same as SULCATA.
 
 ## Keyop Example
+This example is based on [keyboard-teleop-js](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl). You can see a slide bar on your web page and type your keyboard to convey key siganl to roscore through ros-bridge.
 
 ### Installation
 In order to install the required node stack, you can download the code from this repository.
@@ -95,6 +96,31 @@ If you are an experienced node.js developer, you are familiar with the structure
 - The html tags between head should be inserted to layout.jade.
 - The js source code should be inserted to client.js
 - The html tags between body should be inserted to index.jade.
+
+In addition to apply roslibjs, you should copy the library files into public/build directiry then the sturucture should be same as below.
+```
+keyop-example
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── public
+│   ├── build
+│   │   ├── keyboardteleop.js
+│   │   └── keyboardteleop.min.js
+│   ├── images
+│   ├── javascripts
+│   │   └── client.js
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.jade
+    ├── index.jade
+    └── layout.jade
+```
 
 ## Reference
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
