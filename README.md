@@ -70,7 +70,9 @@ As you can see, you can trace/control topics by using rqt so that you also can f
 ![images/rqt2.png](images/rqt2.png)
 
 ### How to build a mixture with ROS and node.js?
-express-generator, jade, and ros-bridge will be mentioned.
+Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as the below image.
+![images/tree.png](images/tree.png)
+
 
 
 ## Reference
