@@ -1,0 +1,29 @@
+{
+  "name": "web-server",
+  "version": "0.0.1",
+	"description": "a web server stack for sulcata-web",
+  "author": "bus710 <bus710@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bus710/sulcata-web"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+		"sys": "*",
+    "websocket": ">=1.0.22",
+    "express": "~4.13.4",
+    "express-generator": "~4.13.1",
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "main": "app.js"
+}
