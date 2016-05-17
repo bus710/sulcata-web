@@ -69,7 +69,7 @@ As you can see, you can trace/control topics by using rqt so that you also can f
 ![images/rqt.png](images/rqt.png)
 ![images/rqt2.png](images/rqt2.png)
 
-### How to build a mixture with ROS and node.js?
+### How to build a mixture with ROS, node.js, and roslibjs examples?
 Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below
 ```
 keyop-example
@@ -91,8 +91,10 @@ keyop-example
     ├── index.jade
     └── layout.jade
 ```
-
-
+If you are an experienced node.js developer, you are familiar with the structure. Even if you are not, it is simple as other web frameworks. In order to merge roslibjs and node.js, I divided the provided HTML code from Robotwebtools into three files such as layout.jade, index.jade, and client.js with below rules.
+- The html tags between head should be inserted to layout.jade.
+- The js source code should be inserted to client.js
+- The html tags between body should be inserted to index.jade.
 
 ## Reference
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
