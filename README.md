@@ -17,6 +17,7 @@ Users can:
 ## Table of contents
 - [Description](#description)
 - [Requirement](#requirement)
+- [Keyop Example](#keyop-example)
 - [Installation](#installation)
 - [Launch](#launch)
 - [Commentary](#commentary)
@@ -25,21 +26,21 @@ Users can:
 ## Requirement
 The requirement is same as SULCATA.
 
-## Installation
+## Keyop Example
+### Installation
 ```
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
-cd sulcata-web/web-server
+cd sulcata-web/keyop-example
 npm install
 ```
-
-## Launch
+### Launch
 ```
-cd ~/Download/sulcata-web
-roslaunch rosbridge_server rosbridge_websocket.launch
+cd ~/Download/sulcata-web/scripts
+./06_rosbridge
 
 # in a new terminal
-cd web-server
+cd sulcata-web/keyop-example
 npm start
 ```
 
