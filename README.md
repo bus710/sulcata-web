@@ -65,11 +65,6 @@ Now you can type keys on your web browser such as up, down, left, right keys to 
 ### Access
 
 ## Commentary
-### How to find a specific topic?
-As you can see, you can trace/control topics by using rqt so that you also can find the correct topic for your web interface. In this case, it is <b>/mobile_base/commands/velocity</b>. You can find the spot to change the topic from <b>public/javascript/client.js</b>. Another important file is <b>build/keyboardteleop.js</b>. You should check your keycode, and apply to the file to adjust the switch-case section in the file.   
-![images/rqt.png](images/rqt.png)
-![images/rqt2.png](images/rqt2.png)
-
 ### How to build a mixture with ROS, node.js, and roslibjs examples?
 Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below
 ```
@@ -121,6 +116,14 @@ keyop-example
     ├── index.jade
     └── layout.jade
 ```
+
+### How to find a specific topic?
+If you have a different robot system, you should check your topics to adjust this stacks for your system. If you check the client.js file, you might be noticed that there is a variable, which is "teleop". It is a javascript object and it contains the location of a certain topic.     
+
+As you can see, you can trace/control topics by using rqt so that you also can find the correct topic for your web interface. In this case, it is <b>/mobile_base/commands/velocity</b>. You can find the spot to change the topic from <b>public/javascript/client.js</b>. Another important file is <b>build/keyboardteleop.js</b>. You should check your keycode, and apply to the file to adjust the switch-case section in the file.   
+![images/rqt.png](images/rqt.png)
+![images/rqt2.png](images/rqt2.png)
+
 
 ## Reference
 [1] http://wiki.ros.org/Books/ROS_Robot_Programing   
