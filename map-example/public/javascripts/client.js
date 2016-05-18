@@ -16,14 +16,14 @@ function init() {
 	// part for map example
 	var viewer = new ROS2D.Viewer({
 		divID  : 'nav',
-		width  : 750,
-		height : 800
+		width  : 400,
+		height : 300
 	});
 
 	var nav = NAV2D.OccupancyGridClientNav({
 		ros : ros,
 	  rootObject : viewer.scene,
-		viewer : viewer,
+		viewer 		 : viewer,
 		serverName : '/pr2_move_base' // <======= 
 	});
 
@@ -45,7 +45,7 @@ function init() {
 			// Change the speed label.
 			$('#speed-label').html('Speed: ' + ui.value + '%');
 			// Scale the speed.
-			teleop.scale = (ui.value / 100.0);
+			teleop.scale = (ui.value / 80.0);
 		}
 	});
 
