@@ -6,6 +6,30 @@ var host = 'ws://192.168.0.5:9090';
  *       */
 
 function init() {
+	setInterval(function(){
+		console.log('timer');
+
+		$('#nav').empty();
+
+	// ======================== //
+	// part for map example
+	var viewer = new ROS2D.Viewer({
+		divID  : 'nav',
+		width  : 400,
+		height : 300
+	});
+
+	var navi = NAV2D.OccupancyGridClientNav({
+		ros : ros,
+	  rootObject : viewer.scene,
+		viewer 		 : viewer,
+		serverName : '/pr2_move_base' // <======= 
+	});
+
+
+
+	}, 1000);
+
 	console.log("init: start")
 	// Connecting to ROS.
 	var ros = new ROSLIB.Ros({
@@ -20,12 +44,13 @@ function init() {
 		height : 300
 	});
 
-	var nav = NAV2D.OccupancyGridClientNav({
+	var navi = NAV2D.OccupancyGridClientNav({
 		ros : ros,
 	  rootObject : viewer.scene,
 		viewer 		 : viewer,
 		serverName : '/pr2_move_base' // <======= 
 	});
+
 
 	// ========================= //
 	// part for keyop example
@@ -45,7 +70,7 @@ function init() {
 			// Change the speed label.
 			$('#speed-label').html('Speed: ' + ui.value + '%');
 			// Scale the speed.
-			teleop.scale = (ui.value / 80.0);
+			teleop.scale = (ui.value / 100.0);
 		}
 	});
 
