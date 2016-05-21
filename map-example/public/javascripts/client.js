@@ -1,60 +1,16 @@
 
 var host = 'ws://192.168.0.5:9090';
 
-/**
- *    * Setup all GUI elements when the page is loaded. 
- *       */
-
-function init() {
-	setInterval(function(){
-		console.log('timer');
-
-		$('#nav').empty();
-
-	// ======================== //
-	// part for map example
-	var viewer = new ROS2D.Viewer({
-		divID  : 'nav',
-		width  : 400,
-		height : 300
-	});
-
-	var navi = NAV2D.OccupancyGridClientNav({
-		ros : ros,
-	  rootObject : viewer.scene,
-		viewer 		 : viewer,
-		serverName : '/pr2_move_base' // <======= 
-	});
-
-
-
-	}, 1000);
-
-	console.log("init: start")
+function keyOp(){
+	// ========================= //
+	// part for keyop example
+	// Initialize the teleop.
+	
 	// Connecting to ROS.
 	var ros = new ROSLIB.Ros({
 		url : host
 	});
 
-	// ======================== //
-	// part for map example
-	var viewer = new ROS2D.Viewer({
-		divID  : 'nav',
-		width  : 400,
-		height : 300
-	});
-
-	var navi = NAV2D.OccupancyGridClientNav({
-		ros : ros,
-	  rootObject : viewer.scene,
-		viewer 		 : viewer,
-		serverName : '/pr2_move_base' // <======= 
-	});
-
-
-	// ========================= //
-	// part for keyop example
-	// Initialize the teleop.
 	var teleop = new KEYBOARDTELEOP.Teleop({
 		ros : ros,
 			topic : '/mobile_base/commands/velocity'
@@ -78,5 +34,34 @@ function init() {
 	$('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
 	teleop.scale = ($('#speed-slider').slider('value') / 100.0);
 
-	console.log("init: end")
+
+}
+
+function mapDraw(){
+	$('#nav').empty();
+	// Connecting to ROS.
+	var ros = new ROSLIB.Ros({
+		url : host
+	});
+
+	// ======================== //
+	// part for map example
+	var viewer = new ROS2D.Viewer({
+		divID  : 'nav',
+			width  : 400,
+			height : 300
+	});
+
+	var navi = NAV2D.OccupancyGridClientNav({
+		ros : ros,
+		rootObject : viewer.scene,
+		viewer 		 : viewer,
+		serverName : '/pr2_move_base' // <======= 
+	});
+}
+
+function init() {
+	keyOp();
+	mapDraw();
+	setInterval(function(){ mapDraw() }, 3000);
 }
