@@ -1,19 +1,18 @@
 
-var host = 'ws://192.168.0.5:9090';
-
-function keyOp(){
-	// ========================= //
-	// part for keyop example
-	// Initialize the teleop.
 	
-	// Connecting to ROS.
-	var ros = new ROSLIB.Ros({
-		url : host
+var Sulcata = function( id ){
+	this.id = id;
+	this.host = 'ws://192.168.0.5:9090';
+	this.ros = new ROSLIB.Ros({
+		url : this.host
 	});
+}
 
+Sulcata.prototype.keyOp = function(){
+	// Initialize the teleop.
 	var teleop = new KEYBOARDTELEOP.Teleop({
-		ros : ros,
-			topic : '/mobile_base/commands/velocity'
+		ros : this.ros,
+		topic : '/mobile_base/commands/velocity'
 	});
 
 	// Create a UI slider using JQuery UI.
@@ -33,27 +32,22 @@ function keyOp(){
 	// Set the initial speed .
 	$('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
 	teleop.scale = ($('#speed-slider').slider('value') / 100.0);
-
-
 }
 
-function mapDraw(){
-	$('#nav').empty();
-	// Connecting to ROS.
-	var ros = new ROSLIB.Ros({
-		url : host
-	});
+Sulcata.prototype.mapDraw = function(){
 
-	// ======================== //
+	$('#nav').empty();
+
 	// part for map example
 	var viewer = new ROS2D.Viewer({
 		divID  : 'nav',
-			width  : 400,
-			height : 300
+		width  : 400,
+		height : 300
 	});
 
-	var navi = NAV2D.OccupancyGridClientNav({
-		ros : ros,
+	var navi;
+	navi = NAV2D.OccupancyGridClientNav({
+		ros : this.ros,
 		rootObject : viewer.scene,
 		viewer 		 : viewer,
 		serverName : '/pr2_move_base' // <======= 
@@ -61,7 +55,9 @@ function mapDraw(){
 }
 
 function init() {
-	keyOp();
-	mapDraw();
-	setInterval(function(){ mapDraw() }, 3000);
+	var sulcata = new Sulcata('test');
+
+	sulcata.keyOp();
+	sulcata.mapDraw();
+	setInterval(function(){ sulcata.mapDraw() }, 3000);
 }
