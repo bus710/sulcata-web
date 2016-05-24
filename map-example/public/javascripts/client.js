@@ -1,8 +1,8 @@
+var host = 'ws://192.168.0.5:9090';
 
-	
 var Sulcata = function( id ){
 	this.id = id;
-	this.host = 'ws://192.168.0.5:9090';
+	this.host = host;
 	this.ros = new ROSLIB.Ros({
 		url : this.host
 	});

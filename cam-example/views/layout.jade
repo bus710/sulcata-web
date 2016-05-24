@@ -1,0 +1,28 @@
+doctype html
+html
+head
+meta(charset="UTF-8") 
+
+<!-- part for keyop example -->
+link(rel="stylesheet", type="text/css", href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css")
+
+script(src='//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js')
+script(src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js')
+script(src='//cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js')
+script(src='//cdn.robotwebtools.org/roslibjs/current/roslib.min.js')
+script(src='../build/keyboardteleop.js')
+
+<!-- part for map example -->
+script(src="//cdn.robotwebtools.org/EaselJS/current/easeljs.min.js")
+script(src="//cdn.robotwebtools.org/ros2djs/current/ros2d.min.js")
+script(src="//cdn.robotwebtools.org/nav2djs/current/nav2d.min.js")
+
+<!-- part for cam example -->
+script(src="//cdn.robotwebtools.org/mjpegcanvasjs/current/mjpegcanvas.min.js")
+
+<!-- part for local js -->
+script(src='javascripts/client.js')
+
+
+body(onload='init()')
+block content
