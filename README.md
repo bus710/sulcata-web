@@ -122,8 +122,19 @@ Now you can see the map and video when you control your robot.
 
 ## Commentary
 ### How to build a mixture with ROS, node.js, and roslibjs examples?
-First of all, I had to devide the examples from Rbotwebtool project. Since the examples has unified source code for client only, I had to cut the source codes into different files.  
-Fortunately, node/express provides a helpful utility, which is express-generator. Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below. an html file should be separated to two jade files (view/layout.jde and view/index.jade). The javascript part is just saved to the client.js file (public/javascript/client.js). In order to manage several node libraries, I leveraged package.json as same as other node.js developers. So eventually, the project structure should be looked like as below.   
+First of all, I had to devide the example code from Rbotwebtool project. Since the example has the unified source code with html part and javascript part for client only, I had to do three main tasks. 
+1. building an web server by using node.js.
+2. deviding the source code into different files.
+3. merging keyOp, 2D map, and cam project. 
+4. Running node.js server.
+
+For no.1, Fortunately, node.js/express provides a helpful utility, which is <b>express-generator</b>. Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below file tree. 
+After generating the typical structure, you should install additional node libraries. When you issue <b>npm install</b>, the command reads <b>package.json</b> and automatically installs all the required libraries. (but, of course, please use the package.json file from this repository.)
+For no.2, the example file from robotwebtool should be separated to several files. For html, two jade files (view/layout.jde and view/index.jade) were used. The javascript part is just saved to the client.js file (public/javascript/client.js). 
+For no.3, you may have to know some basic javascript syntax since I modifed each javascript code from three different project into the client.js file. However, it wasn't about algorithm so that if you find the pattern, it is just copy and paste.
+For no.4, you only need to run <b>npm start</b> in the root directry. In our case, the root can be one of those: keyop-example, map-example, or cam-example.  
+
+This is the basic directory structure after <b>express-generator</b>
 ```
 keyop-example
 ├── app.js
@@ -145,7 +156,7 @@ keyop-example
     └── layout.jade
 ```
 
-In addition to apply <b>keyboardteleop.js</b>, you should copy the library files into the public/build directiry then the sturucture should be same as below.
+In addition to apply <b>keyboardteleop.js</b>, you should copy the library files into the public/build directiry then the sturucture should be same as below. (You also can use cdn though.)
 ```
 keyop-example
 ├── app.js
@@ -171,7 +182,7 @@ keyop-example
 ```
 
 ### How to find a specific topic?
-If you have a different robot system, you should check your topics from roscore to adjust this stacks for your system. If you check the client.js file, you might be noticed that there is a variable, which is "teleop". It is a javascript object and it contains the location of a certain topic.     
+If you have a different robot system, you should check your topics from roscore to adjust this stacks for your own system. If you check the client.js file, you might be noticed that there is a variable, which is "teleop". It is a javascript object and it contains the location of a certain topic.     
 
 As below screenshots, you can trace/control topics by using rqt so that you also can find the correct topics for your web interface. In this case, it is <b>/mobile_base/commands/velocity</b>. You can find the spot to change the topic from <b>public/javascript/client.js</b>. Another important file is <b>build/keyboardteleop.js</b>. You should check your keycode, and apply to the file to adjust the switch-case section in the file.   
 ![images/rqt.png](images/rqt.png)
