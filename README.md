@@ -144,12 +144,8 @@ keyop-example
     ├── index.jade
     └── layout.jade
 ```
-If you are an experienced node.js developer, you are familiar with the structure. Even if you are not, it is simple as other web frameworks. In order to merge roslibjs and node.js, I divided the provided HTML example code from Robotwebtools into three files such as layout.jade, index.jade, and client.js with below rules.
-- The html tags between <b>head</b> should be inserted to layout.jade.
-- The js source code should be inserted to client.js
-- The html tags between <b>body</b> should be inserted to index.jade.
 
-In addition to apply roslibjs, you should copy the library files into the public/build directiry then the sturucture should be same as below.
+In addition to apply <b>keyboardteleop.js</b>, you should copy the library files into the public/build directiry then the sturucture should be same as below.
 ```
 keyop-example
 ├── app.js
