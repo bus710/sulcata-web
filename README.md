@@ -25,7 +25,7 @@ Users can:
 The requirement is same as SULCATA.
 
 ## Keyop Example
-This example is based on [keyboard-teleop-js](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl). You can see a slide bar on your web page and type your keyboard to send key siganl to roscore through ros-bridge. (Although the keyboard-teleop-js was used for this example, there is some modification to adjust keycode values for vim navigation style - hjkl.)
+This example is based on [keyboard-teleop-js](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl). You can see a slide bar on your web page and type your keyboard to send key siganl to roscore through ros-bridge.  
 
 ### Installation
 In order to install the required node stack, you can download the code from this repository.
@@ -82,7 +82,7 @@ npm start
 After above steps, you can access your robot via web browser. However, make sure that you access to the correct ip address. Since my system has an address as '192.168.0.5', I accessed to '192.168.0.5:3000'.   
 
 ## Cam Example
-This example was built on the previous keyOp-example + map-example so that you can see a video stream but at the same time, you can control your robot and see a map as same as the keyOp-example and map-example.    
+This example was built on the previous keyOp-example + map-example so that you can see a video stream but at the same time, you can control your robot and see a map as same as the keyOp-example and map-example. (Although the keyboard-teleop-js was used for this example, there is some modification to adjust keycode values for vim navigation style - hjkl.)  
 
 ### Installation
 In order to install the required node stack, you can download the code from this repository. Also you need to install <b>mjpeg-server</b> to add video server to ros.
@@ -115,7 +115,7 @@ npm start
 
 ### Access
 After above steps, you can access your robot via web browser. However, make sure that you access to the correct ip address. Since my system has an address as '192.168.0.5', I accessed to '192.168.0.5:3000'.   
-![images/result-cam.png](images/result-cam.png)
+![images/result-cam1.png](images/result-cam1.png)
 
 ## Commentary
 ### How to build a mixture with ROS, node.js, and roslibjs examples?
