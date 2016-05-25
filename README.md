@@ -8,7 +8,7 @@ Users can:
 - monitor a 2D map on your web browser.
 - watch a video stream on your web browser.
 
-See also [>>>](https://youtu.be/e_FdrEWOHgA)  
+See also [https://youtu.be/e_FdrEWOHgA](https://youtu.be/e_FdrEWOHgA)  
 
 ## Maintainer
 - [SJ Kim](http://bus710.net) <<bus710@gmail.com>>
