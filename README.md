@@ -1,5 +1,7 @@
 # sulcata-web
 
+(To read Korean version.)[#README_kr.md]
+
 ## Description
 This repository is a part of a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB. The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and rectified video from kinect v2 will be shown on web browser. Unlike previous way - accessing by another ROS host, web interface can provide easy access so that you can access your sulcata system from most of modern web browser (I recommend chrome though). 
 
