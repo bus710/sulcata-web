@@ -3,7 +3,12 @@
 [To read English version.](README.md)
 
 ## Description
-This repository is a part of a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB. The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and rectified video from kinect v2 will be shown on web browser. Unlike previous way - accessing by another ROS host, web interface can provide easy access so that you can access your sulcata system from most of modern web browser (I recommend chrome though). 
+본 저장소는 로봇 통합 프로젝트인 [설카타](http://github.com/bus710/sulcata)의 한 부분 입니다. 본 프로젝트는 설카타 위에 추가로 진행되었으므로, 실제 구동을 확인하기 위해서는 설카타를 먼저 진행하셔야 합니다. 본 프로젝트의 주요 목표는 로봇 개발자들을 위한 쉬운 웹 인터페이스를 제공하는데 있습니다. 그것을 위해 키보드를 통한 로봇 제어와 지도 표시, 카메라 영상 전송 등이 웹 브라우저를 통해 보여질 것 입니다. 기존에 ROS 기반 로봇을 제어하며 영상과 지도를 받기 위해서는 또 다른 ROS 호스트가 필요하던 것에 비해, 웹 브라우저로 제어와 계측을 하는 것은 비교적 쉬운 방식이 될 것이라 생각 합니다. 
+
+사용자들은 다음과 같은 기능을 사용할 수 있습니다.
+- 설카타의 베이스인 거북이를 웹을 통해 제어 합니다.
+- 기존에 rviz로 관찰할 수 있었던 2d 지도를 브라우저를 통해 볼 수 있습니다.
+- 또한 키넥트가 촬영하는 영상도 브라우저를 통해 제공 됩니다. 
 
 Users can:  
 - control Kobuki via web interface.
