@@ -92,7 +92,7 @@ npm start
 본 예제는 위의 두 예제에 더해 개발 되었습니다. 하나의 웹 페이지에서 로봇 제어와 지도, 영상 확인을 동시에 확인 할 수 있습니다. (주의할 점은 본 예제에 쓰인 keyboard-teleop-js가 공식 저장소의 것과 약간 다르게 편집 된 점 입니다. 개인 취향으로 상하좌우 키 대신에 hjkl - vim 네비게이션 키 입력으로 변경하였습니다. 
 
 ### Installation
-역시 본 저장소에서 모든 것을 구할 수 있습니다만, 추가로 mjpeg-server를 추가로 설치해 주어야 합니다. 
+역시 본 저장소에서 모든 것을 구할 수 있습니다만, mjpeg-server를 추가로 설치해 주어야 합니다. 
 ```
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
