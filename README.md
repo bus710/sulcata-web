@@ -131,10 +131,12 @@ First of all, I had to devide the example code from Rbotwebtool project. Since t
 3. merging keyOp, 2D map, and cam project.  
 4. Running node.js server.  
 
-For no.1, Fortunately, node.js/express provides a helpful utility, which is <b>express-generator</b>. Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below file tree.   
-After generating the typical structure, you should install additional node libraries. When you issue <b>npm install</b>, the command reads <b>package.json</b> and automatically installs all the required libraries. (but, of course, please use the package.json file from this repository.)  
+For no.1, Fortunately, node.js/express provides a helpful utility, which is <b>express-generator</b>. Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below file tree. After generating the typical structure, you should install additional node libraries. When you issue <b>npm install</b>, the command reads <b>package.json</b> and automatically installs all the required libraries. (but, of course, please use the package.json file from this repository.)  
+  
 For no.2, the example file from robotwebtool should be separated to several files. For html, two jade files (view/layout.jde and view/index.jade) were used. The javascript part is just saved to the client.js file (public/javascript/client.js).   
+  
 For no.3, you may have to know some basic javascript syntax since I modifed each javascript code from three different projects into the client.js file. However, it wasn't about algorithm so that if you find the pattern, it is just copy and paste.  
+  
 For no.4, you only need to run <b>npm start</b> in the root directry. In our case, the root can be one of those: keyop-example, map-example, or cam-example.  
 
 This is the basic directory structure after <b>express-generator</b>
