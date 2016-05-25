@@ -1,13 +1,15 @@
-var host = 'ws://192.168.0.5:9090';
 
 var Sulcata = function( id ){
 	this.id = id;
-	this.host = host;
+	this.hostIp = location.host.split(":")[0];
+	this.host = 'ws://' + this.hostIp + ':9090';
 	this.ros = new ROSLIB.Ros({
 		url : this.host
 	});
 }
 
+// ==========================================
+// keyOp method
 Sulcata.prototype.keyOp = function(){
 	// Initialize the teleop.
 	var teleop = new KEYBOARDTELEOP.Teleop({
@@ -29,30 +31,13 @@ Sulcata.prototype.keyOp = function(){
 		}
 	});
 
-	/*
-	$('#left').button().click(function(){
-		console.log('left');
-		teleop.handleKey(65, true);
-	});
-	$('#bw').button().click(function(){
-		console.log('bw');
-		teleop.handleKey(83, true);
-	});
-	$('#fw').button().click(function(){
-		console.log('fw');
-		teleop.handleKey(87, true);
-	});
-	$('#right').button().click(function(){
-		console.log('right');
-		teleop.handleKey(68, true);
-	});
-	*/
-
 	// Set the initial speed .
 	$('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
 	teleop.scale = ($('#speed-slider').slider('value') / 100.0);
 }
 
+// ==========================================
+// mapDraw method
 Sulcata.prototype.mapDraw = function(){
 
 	$('#nav').empty();
@@ -73,10 +58,12 @@ Sulcata.prototype.mapDraw = function(){
 	});
 }
 
+// ==========================================
+// camDraw method
 Sulcata.prototype.camDraw = function(){
 	var camViewer = new MJPEGCANVAS.Viewer({
 		divID : 'mjpeg',
-		host : '192.168.0.5',
+		host : this.hostIp,
 		width : 320,
 		height : 240,
 		//topic : '/wide_stereo/left/image_color' // <=======
@@ -84,6 +71,7 @@ Sulcata.prototype.camDraw = function(){
 	});
 }
 
+// ==========================================
 function init() {
 	var sulcata = new Sulcata('test');
 
