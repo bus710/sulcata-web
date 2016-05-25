@@ -1,7 +1,7 @@
 # sulcata-web
 
 ## Description
-This repository is a part of a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB. The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and rectified video from kinect v2 will be shown on web browser.  
+This repository is a part of a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB. The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and rectified video from kinect v2 will be shown on web browser. Unlike previous way - accessing by another ROS host, web interface can provide easy access so that you can access your sulcata system from most of modern web browser (I recommend chrome though). 
 
 Users can:  
 - control Kobuki via web interface.
@@ -115,11 +115,15 @@ npm start
 
 ### Access
 After above steps, you can access your robot via web browser. However, make sure that you access to the correct ip address. Since my system has an address as '192.168.0.5', I accessed to '192.168.0.5:3000'.   
-![images/result-cam1.png](images/result-cam1.png)
+![images/result-cam1.png](images/result-cam1.png)  
+Now you can see the map and video when you control your robot. 
+
+
 
 ## Commentary
 ### How to build a mixture with ROS, node.js, and roslibjs examples?
-Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below
+First of all, I had to devide the examples from Rbotwebtool project. Since the examples has unified source code for client only, I had to cut the source codes into different files.  
+Fortunately, node/express provides a helpful utility, which is express-generator. Once you run express-generator in your project's root dierectory, the command makes a typical structure with jade(html), css, and js files as below. an html file should be separated to two jade files (view/layout.jde and view/index.jade). The javascript part is just saved to the client.js file (public/javascript/client.js). In order to manage several node libraries, I leveraged package.json as same as other node.js developers. So eventually, the project structure should be looked like as below.   
 ```
 keyop-example
 ├── app.js
