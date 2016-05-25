@@ -29,13 +29,24 @@ Sulcata.prototype.keyOp = function(){
 		}
 	});
 
+	/*
 	$('#left').button().click(function(){
 		console.log('left');
-		console.log(teleop.prototype);
+		teleop.handleKey(65, true);
 	});
-	$('#bw').button().click(function(){console.log('bw')});
-	$('#fw').button().click(function(){console.log('fw')});
-	$('#right').button().click(function(){console.log('right')});
+	$('#bw').button().click(function(){
+		console.log('bw');
+		teleop.handleKey(83, true);
+	});
+	$('#fw').button().click(function(){
+		console.log('fw');
+		teleop.handleKey(87, true);
+	});
+	$('#right').button().click(function(){
+		console.log('right');
+		teleop.handleKey(68, true);
+	});
+	*/
 
 	// Set the initial speed .
 	$('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
