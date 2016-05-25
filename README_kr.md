@@ -29,7 +29,7 @@
 모든 하드웨어와 소프트웨어는 기존 설카타를 기반으로 진행 됩니다.
 
 ## Keyop Example
-첫번째 예제인 키옵 예제 입니다. 이것은 [keyboard-teleop-js](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl)를 기반으로 구현 되었습니다. 본 예제를 실핼하면 웹 브라우저 상에서 속도 제어용 bar를 볼 수 있으며, 키보드 입력 - 상하좌우를 통해 거북이의 움직임을 제어할 수 있게 됩니다. 
+첫번째 예제인 키옵 예제 입니다. 이것은 [keyboard-teleop-js](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl)를 기반으로 구현 되었습니다. 본 예제를 실행하면 웹 브라우저 상에서 속도 제어용 bar를 볼 수 있으며, 키보드 입력 - 상하좌우를 통해 거북이의 움직임을 제어할 수 있게 됩니다. 
 
 ### Installation
 먼저 필요한 웹서버인 node 스택을 설치하기 위해 다음과 같이 입력 합니다. 물론 모든 필요한 파일은 본 저장소에 포함 되어 있습니다. 
