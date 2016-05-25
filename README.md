@@ -125,6 +125,7 @@ Now you can see the map and video when you control your robot.
 ## Commentary
 ### How to build a mixture with ROS, node.js, and roslibjs examples?
 First of all, I had to devide the example code from Rbotwebtool project. Since the example has the unified source code with html part and javascript part for client only, I had to do three main tasks.   
+  
 1. building an web server by using node.js.  
 2. deviding the source code into different files.  
 3. merging keyOp, 2D map, and cam project.  
