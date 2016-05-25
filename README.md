@@ -1,15 +1,12 @@
 # sulcata-web
 
 ## Description
-
-<b>THIS PROJECT IS CURRENTLY UNDER CONSTRUCTION</b>
-
-This repository is a part of a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB. The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and image from kinect v2 will be shown on web browser.  
+This repository is a part of a robot integration project, which is [SULCATA](http://github.com/bus710/sulcata). You need to set up SULCATA on your system before SULCATA-WEB. The main goal of this repository is an easy web interface for users. For that, keyop buttons, 2D map, and rectified video from kinect v2 will be shown on web browser.  
 
 Users can:  
 - control Kobuki via web interface.
-- monitor 2D maps on your web browser.
-- watch RGBD video streams on your web browser.
+- monitor a 2D map on your web browser.
+- watch a video stream on your web browser.
 
 ## Maintainer
 - [SJ Kim](http://bus710.net) <<bus710@gmail.com>>
@@ -19,7 +16,7 @@ Users can:
 - [Requirement](#requirement)
 - [Keyop Example](#keyop-example)
 - [Map Example](#map-example)
-- [RGBD Example](#rgbd-example)
+- [Cam Example](#cam-example)
 - [Commentary](#commentary)
 - [Todolist](#todolist)
 - [Reference](#reference)
@@ -28,7 +25,7 @@ Users can:
 The requirement is same as SULCATA.
 
 ## Keyop Example
-This example is based on [keyboard-teleop-js](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl). You can see a slide bar on your web page and type your keyboard to convey key siganl to roscore through ros-bridge.
+This example is based on [keyboard-teleop-js](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl). You can see a slide bar on your web page and type your keyboard to send key siganl to roscore through ros-bridge. (Although the keyboard-teleop-js was used for this example, there is some modification to adjust keycode values for vim navigation style - hjkl.)
 
 ### Installation
 In order to install the required node stack, you can download the code from this repository.
@@ -50,20 +47,75 @@ npm start
 ```
 
 ### Access
-After above steps, you can access your robot via web browser.  
+After above steps, you can access your robot via web browser. However, make sure that you access to the correct ip address. Since my system has an address as '192.168.0.5', I accessed to '192.168.0.5:3000'.   
 ![images/result.png](images/result.png)
 
 Now you can type keys on your web browser such as up, down, left, right keys to control your Turtle-bot/Kobuki.
 
 ## Map Example
-### Installation
-### Launch
-### Access  
+This example was built on the previous keyOp-example so that you can see a 2D map but at the same time, you can control your robot as same as the keyOp-example.    
 
-## RGBD Example
 ### Installation
+In order to install the required node stack, you can download the code from this repository.  
+```
+cd ~/Download
+git clone http://github.com/bus710/sulcata-web
+cd sulcata-web/map-example
+npm install
+```
+
 ### Launch
+```
+cd ~/Download/sulcata-web/scripts
+./06_rosbridge
+
+# in a new terminal
+cd ~/Download/sulcata-web/scripts
+./07_robot_pose_publisher
+
+# in a new terminal
+cd sulcata-web/map-example
+npm start
+```
+
+### Access  
+After above steps, you can access your robot via web browser. However, make sure that you access to the correct ip address. Since my system has an address as '192.168.0.5', I accessed to '192.168.0.5:3000'.   
+
+## Cam Example
+This example was built on the previous keyOp-example + map-example so that you can see a video stream but at the same time, you can control your robot and see a map as same as the keyOp-example and map-example.    
+
+### Installation
+In order to install the required node stack, you can download the code from this repository. Also you need to install <b>mjpeg-server</b> to add video server to ros.
+```
+cd ~/Download
+git clone http://github.com/bus710/sulcata-web
+cd sulcata-web/cam-example
+npm install
+
+sudo apt-get install ros-indigo-mjpeg-server
+```
+
+### Launch
+```
+cd ~/Download/sulcata-web/scripts
+./06_rosbridge
+
+# in a new terminal
+cd ~/Download/sulcata-web/scripts
+./07_robot_pose_publisher
+
+# in a new terminal
+cd ~/Download/sulcata-web/scripts
+./08_mjpeg_server
+
+# in a new terminal
+cd sulcata-web/cam-example
+npm start
+```
+
 ### Access
+After above steps, you can access your robot via web browser. However, make sure that you access to the correct ip address. Since my system has an address as '192.168.0.5', I accessed to '192.168.0.5:3000'.   
+![images/result-cam.png](images/result-cam.png)
 
 ## Commentary
 ### How to build a mixture with ROS, node.js, and roslibjs examples?
