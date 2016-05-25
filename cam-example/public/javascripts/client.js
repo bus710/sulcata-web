@@ -12,7 +12,7 @@ Sulcata.prototype.keyOp = function(){
 	// Initialize the teleop.
 	var teleop = new KEYBOARDTELEOP.Teleop({
 		ros : this.ros,
-		topic : '/mobile_base/commands/velocity'
+		topic : '/mobile_base/commands/velocity' // <=======
 	});
 
 	// Create a UI slider using JQuery UI.
@@ -29,6 +29,14 @@ Sulcata.prototype.keyOp = function(){
 		}
 	});
 
+	$('#left').button().click(function(){
+		console.log('left');
+		console.log(teleop.prototype);
+	});
+	$('#bw').button().click(function(){console.log('bw')});
+	$('#fw').button().click(function(){console.log('fw')});
+	$('#right').button().click(function(){console.log('right')});
+
 	// Set the initial speed .
 	$('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
 	teleop.scale = ($('#speed-slider').slider('value') / 100.0);
@@ -39,23 +47,23 @@ Sulcata.prototype.mapDraw = function(){
 	$('#nav').empty();
 
 	// part for map example
-	var viewer = new ROS2D.Viewer({
+	var mapViewer = new ROS2D.Viewer({
 		divID  : 'nav',
-		width  : 400,
-		height : 300
+		width  : 320,
+		height : 240
 	});
 
 	var navi;
 	navi = NAV2D.OccupancyGridClientNav({
 		ros : this.ros,
-		rootObject : viewer.scene,
-		viewer 		 : viewer,
+		rootObject : mapViewer.scene,
+		viewer 		 : mapViewer,
 		serverName : '/pr2_move_base' // <======= 
 	});
 }
 
 Sulcata.prototype.camDraw = function(){
-	var viewer = new MJPEGCANVAS.Viewer({
+	var camViewer = new MJPEGCANVAS.Viewer({
 		divID : 'mjpeg',
 		host : '192.168.0.5',
 		width : 320,
@@ -69,7 +77,7 @@ function init() {
 	var sulcata = new Sulcata('test');
 
 	sulcata.keyOp();
+	sulcata.camDraw();
 	sulcata.mapDraw();
 	setInterval(function(){ sulcata.mapDraw() }, 3000);
-	sulcata.camDraw();
 }

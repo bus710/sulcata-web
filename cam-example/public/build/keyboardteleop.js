@@ -60,20 +60,16 @@ KEYBOARDTELEOP.Teleop = function(options) {
     }
     // check which key was pressed
     switch (keyCode) {
-      case 37:
-        // turn left
+      case 72:	// 'h', turn left, (in case of hhkb: 37)
         z = 1 * speed;
 				break;
-			case 39:
-        // turn right
+			case 76:	// 'l', turn right, (in case of hhkb: 39)
         z = -1 * speed;
 				break;
-      case 38:
-        // up
+      case 75:	// 'k', up, (in case of hhkb: 38) 
         x = 0.1 * speed;
 				break;
-      case 40:
-        // down
+      case 74:	// 'j', down, (in case of hhkb: 40)
         x = -0.1 * speed;
 				break;
 				
