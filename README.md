@@ -37,7 +37,8 @@ In order to install the required node stack, you can download the code from this
 sudo apt-get install ros-indigo-rosbridge-*
 sudo apt-get install ros-indigo-robot-pose-publisher
 sudo apt-get install ros-indigo-mjpeg-server
-sudo apt-get install npm
+sudo apt-get install npm node
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
@@ -71,7 +72,8 @@ In order to install the required node stack, you can download the code from this
 sudo apt-get install ros-indigo-rosbridge-*
 sudo apt-get install ros-indigo-robot-pose-publisher
 sudo apt-get install ros-indigo-mjpeg-server
-sudo apt-get install npm
+sudo apt-get install npm node
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
@@ -105,7 +107,8 @@ In order to install the required node stack, you can download the code from this
 sudo apt-get install ros-indigo-rosbridge-*
 sudo apt-get install ros-indigo-robot-pose-publisher
 sudo apt-get install ros-indigo-mjpeg-server
-sudo apt-get install npm
+sudo apt-get install npm node
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
