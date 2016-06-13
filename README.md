@@ -34,10 +34,16 @@ This example is based on [keyboard-teleop-js](http://wiki.ros.org/keyboardteleop
 ### Installation
 In order to install the required node stack, you can download the code from this repository.
 ```
+sudo apt-get install ros-indigo-rosbridge-*
+sudo apt-get install ros-indigo-robot-pose-publisher
+sudo apt-get install ros-indigo-mjpeg-server
+sudo apt-get install npm
+
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
 cd sulcata-web/keyop-example
 npm install
+
 ```
 
 ### Launch
@@ -62,6 +68,11 @@ This example was built on the previous keyOp-example so that you can see a 2D ma
 ### Installation
 In order to install the required node stack, you can download the code from this repository.  
 ```
+sudo apt-get install ros-indigo-rosbridge-*
+sudo apt-get install ros-indigo-robot-pose-publisher
+sudo apt-get install ros-indigo-mjpeg-server
+sudo apt-get install npm
+
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
 cd sulcata-web/map-example
@@ -91,12 +102,15 @@ This example was built on the previous keyOp-example + map-example so that you c
 ### Installation
 In order to install the required node stack, you can download the code from this repository. Also you need to install <b>mjpeg-server</b> to add video server to ros.
 ```
+sudo apt-get install ros-indigo-rosbridge-*
+sudo apt-get install ros-indigo-robot-pose-publisher
+sudo apt-get install ros-indigo-mjpeg-server
+sudo apt-get install npm
+
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
 cd sulcata-web/cam-example
 npm install
-
-sudo apt-get install ros-indigo-mjpeg-server
 ```
 
 ### Launch

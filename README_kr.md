@@ -34,6 +34,11 @@
 ### Installation
 먼저 필요한 웹서버인 node 스택을 설치하기 위해 다음과 같이 입력 합니다. 물론 모든 필요한 파일은 본 저장소에 포함 되어 있습니다. 
 ```
+sudo apt-get install ros-indigo-rosbridge-*
+sudo apt-get install ros-indigo-robot-pose-publisher
+sudo apt-get install ros-indigo-mjpeg-server
+sudo apt-get install npm
+
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
 cd sulcata-web/keyop-example
@@ -64,6 +69,11 @@ npm start
 ### Installation
 첫 예제와 동일한 과정으로 설치가 가능 합니다. 단 keyop-example이 아닌 map-example을 이용하셔야 합니다.
 ```
+sudo apt-get install ros-indigo-rosbridge-*
+sudo apt-get install ros-indigo-robot-pose-publisher
+sudo apt-get install ros-indigo-mjpeg-server
+sudo apt-get install npm
+
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
 cd sulcata-web/map-example
@@ -94,12 +104,15 @@ npm start
 ### Installation
 역시 본 저장소에서 모든 것을 구할 수 있습니다만, mjpeg-server를 추가로 설치해 주어야 합니다. 
 ```
+sudo apt-get install ros-indigo-rosbridge-*
+sudo apt-get install ros-indigo-robot-pose-publisher
+sudo apt-get install ros-indigo-mjpeg-server
+sudo apt-get install npm
+
 cd ~/Download
 git clone http://github.com/bus710/sulcata-web
 cd sulcata-web/cam-example
 npm install
-
-sudo apt-get install ros-indigo-mjpeg-server
 ```
 
 ### Launch
